@@ -1,0 +1,32 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: white;
+}
+
+.header {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.user-input {
+    text-align: center;
+    display: block;
+    border-radius: 20px;
+}
+
+.button {
+    text-align: center;
+    background: #479DFE;
+    color: #2554AF;
+    display: block;
+    border-radius: 20px;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    height: 30px;
+    width: 120px;
+}
