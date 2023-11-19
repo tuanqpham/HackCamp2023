@@ -18,6 +18,8 @@ body {
 .input-block {
     background: #E9E9E9;
     border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 .button {
@@ -32,6 +34,8 @@ body {
     transition: 0.3s;
     height: 27px;
     width: 120px;
+    text-decoration: none;
+    line-height: 27px;
 }
 
 .button:hover {
@@ -42,8 +46,8 @@ body {
 .link {
     text-align: center;
     text-decoration: underline;
-    vertical-align: middle;
-    margin-top: 20px;
+    margin: 20px auto;
+    cursor: pointer;
 }
 
 .link:hover {
