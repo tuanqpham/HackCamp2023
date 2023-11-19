@@ -13,20 +13,40 @@ body {
 
 .user-input {
     text-align: center;
-    display: block;
-    border-radius: 20px;
+}
+
+.input-block {
+    background: #E9E9E9;
+    border-radius: 10px;
 }
 
 .button {
     text-align: center;
-    background: #479DFE;
-    color: #2554AF;
+    background: #7FBBFF;
+    color: #1347AE;
     display: block;
     border-radius: 20px;
     margin: 20px auto;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
     transition: 0.3s;
-    height: 30px;
+    height: 27px;
     width: 120px;
+}
+
+.button:hover {
+    background: #4778DB;
+    color: white;
+}
+
+.link {
+    text-align: center;
+    text-decoration: underline;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+.link:hover {
+    color: #4778DB;
+    transition: 0.3s;
 }
