@@ -1,36 +1,28 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const fs = require('fs');
 
 const app = express();
-const port = 5500;
+const port = 3000;
 
+app.use(cors());
 app.use(bodyParser.json());
 
+let users = [];
+
 app.post('/signup', (req, res) => {
-    const userData = req.body;
-
-    // Read existing data from the file, if any
-    let existingData = [];
-    try {
-        existingData = JSON.parse(fs.readFileSync('users.json', 'utf-8'));
-    } catch (error) {
-        console.error('Error reading existing data:', error);
-    }
-
-    // Add the new data to the array
-    existingData.push(userData);
-
-    // Write the updated data back to the file
-    try {
-        fs.writeFileSync('users.json', JSON.stringify(existingData, null, 2), 'utf-8');
-        console.log('User data saved successfully.');
-    } catch (error) {
-        console.error('Error writing data to file:', error);
-    }
-
+    const newUser = req.body;
+    users.push(newUser);
+    saveUsersToFile();
     res.json({ success: true });
 });
+
+function saveUsersToFile() {
+    const usersData = JSON.stringify(users, null, 2);
+    fs.writeFileSync('users.json', usersData);
+    console.log('Users data saved successfully.');
+}
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
