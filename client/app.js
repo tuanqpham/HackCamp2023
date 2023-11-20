@@ -13,10 +13,26 @@ function navigateToLogin() {
     document.getElementById('login-screen').style.display = 'block';
 }
 
+function navigateToPostOrSeek() {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('post-or-seek').style.display = 'block';
+}
+
+function navigateToCreateGroup() {
+    document.getElementById('post-or-seek').style.display = 'none';
+    document.getElementById('create-group').style.display = 'block';
+}
+
+function navigateToSearchGroup() {
+    document.getElementById('post-or-seek').style.display = 'none';
+    document.getElementById('search-group').style.display = 'block';
+}
+
 function extractLoginValues() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     sendLoginDataToBackend(username, password);
+    navigateToPostOrSeek();
 }
 
 function extractSignupValues() {
@@ -84,3 +100,9 @@ function sendSignupDataToBackend(newUsername, newPassword, confirmPassword) {
         console.error('Error:', error);
     });
 }
+
+function toggleMenu() {
+    var menuItems = document.querySelector('.menu-items');
+    menuItems.classList.toggle('show');
+}
+

@@ -55,6 +55,129 @@
             </a>
         </div>
 
+        <div id="post-or-seek" class="screen" style="display:none">
+            <img class="burger-icon" src="images/menu.png">
+        
+            <img class="profile-picture" width="70px" height="70px" src="images/user.png">
+            <h1 class="header-text">Hello world!</h1>
+
+            <div class="small-header">
+                <img class="logo" width="70px" height="70px" src="images/logo.ico">
+                <h4 class="app-name">Buddies</h4>
+            </div>
+
+            <button class="usage" onclick="navigateToCreateGroup()">
+                Post your study group
+            </button>
+            <button class="usage">
+                Find a study group
+            </button>
+        </div>
+
+        <div id="create-group" class="screen" style="display:none">
+            <img class="burger-icon" src="images/menu.png" width="20px" height="20px">
+        
+            <h1 class="header-text">Create a new study group</h1>
+
+            <div class="small-header">
+                <img class="logo" width="70px" height="70px" src="images/logo.ico">
+                <h4 class="app-name">Buddies</h4>
+            </div>
+
+            <form class="user-input">
+                <label class="input-prompt" for="username">Course</label><br>
+                <input class="input-block" type="text" id="course-name" name="username"><br>
+                <label class="input-prompt" for="password">Availability (Enter your time and day of meeting)</label><br>
+                <input class="input-block" type="text" id="availability" name="password"><br>
+                <label class="input-prompt" for="password">Method of Delivery</label><br>
+                <form>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> In-person
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Online
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Hybrid
+                    </label><br>
+                </form>
+                <label class="input-prompt" for="password">Additional Comments</label><br>
+                <input class="input-block" type="text" id="additional-comments" name="password"><br>
+            </form>
+        </div>
+
+        <div id="create-group" class="screen" style="display:none">
+            <img class="burger-icon" src="images/menu.png" width="20px" height="20px">
+        
+            <h1 class="header-text">Create a new study group</h1>
+
+            <div class="small-header">
+                <img class="logo" width="70px" height="70px" src="images/logo.ico">
+                <h4 class="app-name">Buddies</h4>
+            </div>
+
+            <form class="user-input">
+                <label class="input-prompt" for="username">Course</label><br>
+                <input class="input-block" type="text" id="course-name" name="username"><br>
+                <label class="input-prompt" for="password">Availability (Enter your time and day of meeting)</label><br>
+                <input class="input-block" type="text" id="availability" name="password"><br>
+                <label class="input-prompt" for="password">Method of Delivery</label><br>
+                <form>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> In-person
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Online
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Hybrid
+                    </label><br>
+                </form>
+                <label class="input-prompt" for="password">Additional Comments</label><br>
+                <input class="input-block" type="text" id="additional-comments" name="password"><br>
+            </form>
+
+            <a id="login-button" class="button">
+                <span class="button-text">Post</span>
+            </a>
+        </div>
+
+        <div id="search-group" class="screen" style="display:none">
+            <img class="burger-icon" src="images/menu.png" width="20px" height="20px">
+        
+            <h1 class="header-text">Create a new study group</h1>
+
+            <div class="small-header">
+                <img class="logo" width="70px" height="70px" src="images/logo.ico">
+                <h4 class="app-name">Buddies</h4>
+            </div>
+
+            <form class="user-input">
+                <label class="input-prompt" for="username">Course</label><br>
+                <input class="input-block" type="text" id="course-name" name="username"><br>
+                <label class="input-prompt" for="password">Availability (Enter your time and day of meeting)</label><br>
+                <input class="input-block" type="text" id="availability" name="password"><br>
+                <label class="input-prompt" for="password">Method of Delivery</label><br>
+                <form>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> In-person
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Online
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Hybrid
+                    </label><br>
+                </form>
+                <label class="input-prompt" for="password">Additional Comments</label><br>
+                <input class="input-block" type="text" id="additional-comments" name="password"><br>
+            </form>
+
+            <a id="login-button" class="button">
+                <span class="button-text">Post</span>
+            </a>
+        </div>
+
         <script src="app.js"></script>
 
     </body>
