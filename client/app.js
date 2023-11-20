@@ -8,8 +8,8 @@ function navigateToSignUp() {
     document.getElementById('login-screen').style.display = 'none';
 }
 
-function navigateToLogin() {
-    document.getElementById('signup-screen').style.display = 'none';
+function navigateToLogin(a) {
+    document.getElementById(a).style.display = 'none';
     document.getElementById('login-screen').style.display = 'block';
 }
 
@@ -102,10 +102,11 @@ function sendSignupDataToBackend(newUsername, newPassword, confirmPassword) {
 }
 
 function showBurgerMenu() {
-    if (document.getElementById('burger-menu').style.display = 'none') {
-        document.getElementById('burger-menu').style.display = 'block';
+    var burgerMenu = document.getElementById('burger-menu');
+    if (burgerMenu.style.display === 'none') {
+        burgerMenu.style.display = 'block';
     } else {
-        document.getElementById('burger-menu').style.display = 'none';
+        burgerMenu.style.display = 'none';
     }
 }
 

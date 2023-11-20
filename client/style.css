@@ -66,7 +66,7 @@ body {
 .burger-menu {
     display: block;
     align-items: left;
-    height: 100px;
+    height: 60px;
     background-color: #7FBBFF;
     color: black;
     padding: 10px;
@@ -78,50 +78,16 @@ body {
 }
 
 .menu-items {
+    cursor: pointer;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.menu-item {
-    margin-right: 20px;
-}
-
-  /* Media query to show/hide burger icon based on screen size */
-@media only screen and (max-width: 600px) {
-    .burger-icon {
-        display: flex;
-    }
-
-    .menu-items {
-        display: none; /* Initially hide the menu items on smaller screens */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #333;
-        padding: 10px;
-    }
-
-    .menu-items.show {
-        display: flex;
-    }
-
-    .menu-item {
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .burger-icon:hover span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .burger-icon:hover span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .burger-icon:hover span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
+.small-header {
+    height: 30px;
+    width: 30px;
+    text-align: right;
+    vertical-align: top;
 }
