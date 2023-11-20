@@ -50,7 +50,7 @@
                 <span class="button-text">Continue</span>
             </a>
 
-            <a class="link" onclick="navigateToLogin()">
+            <a class="link" onclick="navigateToLogin('signup-screen')">
                 <span>Back to login</span>
             </a>
         </div>
@@ -67,6 +67,98 @@
                 <label for="pronouns">School</label><br>
                 <input class="input-block" type="text" id="school" name="school"><br>
             </form>
+        </div>
+
+        <div id="post-or-seek" class="screen" style="display:none">
+            <img class="burger-icon" src="images/menu.png" width="50px" height="50px" onclick="showBurgerMenu()">
+            <div id="burger-menu" class="menu" style="display:none">
+                <a class="menu-items" onclick="navigateToLogin('post-or-seek')">View Profile</a>
+                <a class="menu-items" onclick="navigateToLogin('post-or-seek')">Request History</a>
+                <a class="menu-items" onclick="navigateToLogin('post-or-seek')">About Us</a>
+                <a class="menu-items" onclick="navigateToLogin('post-or-seek')">Log Out</a>
+            </div>
+        
+            <img class="profile-picture" width="70px" height="70px" src="images/user.png">
+            <h1 class="header-text">Hello!</h1>
+
+            <div class="small-header">
+                <img class="logo" width="70px" height="70px" src="images/logo.ico">
+                <h4 class="app-name">Buddies</h4>
+            </div>
+
+            <button class="usage" onclick="navigateToCreateGroup()">
+                Post your study group
+            </button>
+            <button class="usage" onclick="navigateToSearchGroup()">
+                Find a study group
+            </button>
+        </div>
+
+        <div id="create-group" class="screen" style="display:none">
+            <img class="burger-icon" src="images/menu.png" width="50px" height="50px" onclick="showBurgerMenu()">
+            <div id="burger-menu" class="menu" style="display:none">
+                <a class="menu-items" onclick="navigateToLogin('create-group')">View Profile</a>
+                <a class="menu-items" onclick="navigateToLogin('create-group')">Request History</a>
+                <a class="menu-items" onclick="navigateToLogin('create-group')">About Us</a>
+                <a class="menu-items" onclick="navigateToLogin('create-group')">Log Out</a>
+            </div>
+            <h1 class="header-text">Create a new study group</h1>
+
+            <div class="small-header">
+                <img class="logo" width="70px" height="70px" src="images/logo.ico">
+                <h4 class="app-name">Buddies</h4>
+            </div>
+
+            <form class="user-input">
+                <label class="input-prompt" for="username">Course</label><br>
+                <input class="input-block" type="text" id="course-name" name="username"><br>
+                <label class="input-prompt" for="password">Availability (Enter your time and day of meeting)</label><br>
+                <input class="input-block" type="text" id="availability" name="password"><br>
+                <label class="input-prompt" for="password">Method of Delivery</label><br>
+                <form>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> In-person
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Online
+                    </label><br>
+                    <label for="preference1">
+                        <input type="checkbox" id="preference1" name="preference1"> Hybrid
+                    </label><br>
+                </form>
+                <label class="input-prompt" for="password">Additional Comments</label><br>
+                <input class="input-block" type="text" id="additional-comments" name="password"><br>
+            </form>
+
+            <a id="login-button" class="button">
+                <span class="button-text">Post</span>
+            </a>
+        </div>
+
+        <div id="search-group" class="screen" style="display:none">
+            <img class="burger-icon" src="images/menu.png" width="50px" height="50px" onclick="showBurgerMenu()">
+            <div id="burger-menu" class="menu" style="display:none">
+                <a class="menu-items" onclick="navigateToLogin('search-group')">View Profile</a>
+                <a class="menu-items" onclick="navigateToLogin('search-group')">Request History</a>
+                <a class="menu-items" onclick="navigateToLogin('search-group')">About Us</a>
+                <a class="menu-items" onclick="navigateToLogin('search-group')">Log Out</a>
+            </div>
+                    
+            <h1 class="header-text">Search study groups</h1>
+
+            <div class="small-header">
+                <img class="logo" width="70px" height="70px" src="images/logo.ico">
+                <h4 class="app-name">Buddies</h4>
+            </div>
+
+            <form class="user-input">
+                <label class="input-prompt" for="search">Search box</label><br>
+                <input class="input-block" type="text" id="search" name="search"><br>
+            </form>
+
+            <a id="login-button" class="button">
+                <span class="button-text">Post</span>
+            </a>
         </div>
 
         <script src="app.js"></script>
