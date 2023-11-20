@@ -64,25 +64,17 @@ body {
 }
 
 .burger-menu {
-    display: flex;
+    display: block;
     align-items: left;
-    justify-content: flex-end;
-    height: 60px;
+    height: 100px;
     background-color: #7FBBFF;
+    color: black;
     padding: 10px;
 }
 
 .burger-icon {
     cursor: pointer;
     flex-direction: column;
-}
-
-.burger-icon span {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.4s;
 }
 
 .menu-items {

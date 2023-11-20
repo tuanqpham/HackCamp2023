@@ -101,8 +101,11 @@ function sendSignupDataToBackend(newUsername, newPassword, confirmPassword) {
     });
 }
 
-function toggleMenu() {
-    var menuItems = document.querySelector('.menu-items');
-    menuItems.classList.toggle('show');
+function showBurgerMenu() {
+    if (document.getElementById('burger-menu').style.display = 'none') {
+        document.getElementById('burger-menu').style.display = 'block';
+    } else {
+        document.getElementById('burger-menu').style.display = 'none';
+    }
 }
 
