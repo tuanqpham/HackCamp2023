@@ -89,7 +89,7 @@
             <button class="usage" onclick="navigateToCreateGroup()">
                 Post your study group
             </button>
-            <button class="usage">
+            <button class="usage" onclick="navigateToSearchGroup()">
                 Find a study group
             </button>
         </div>
@@ -144,7 +144,7 @@
                 <a class="menu-items" onclick="navigateToLogin('search-group')">Log Out</a>
             </div>
                     
-            <h1 class="header-text">Create a new study group</h1>
+            <h1 class="header-text">Search study groups</h1>
 
             <div class="small-header">
                 <img class="logo" width="70px" height="70px" src="images/logo.ico">
@@ -152,24 +152,8 @@
             </div>
 
             <form class="user-input">
-                <label class="input-prompt" for="username">Course</label><br>
-                <input class="input-block" type="text" id="course-name" name="username"><br>
-                <label class="input-prompt" for="password">Availability (Enter your time and day of meeting)</label><br>
-                <input class="input-block" type="text" id="availability" name="password"><br>
-                <label class="input-prompt" for="password">Method of Delivery</label><br>
-                <form>
-                    <label for="preference1">
-                        <input type="checkbox" id="preference1" name="preference1"> In-person
-                    </label><br>
-                    <label for="preference2">
-                        <input type="checkbox" id="preference2" name="preference2"> Online
-                    </label><br>
-                    <label for="preference3">
-                        <input type="checkbox" id="preference3" name="preference3"> Hybrid
-                    </label><br>
-                </form>
-                <label class="input-prompt" for="password">Additional Comments</label><br>
-                <input class="input-block" type="text" id="additional-comments" name="password"><br>
+                <label class="input-prompt" for="search">Search box</label><br>
+                <input class="input-block" type="text" id="search" name="search"><br>
             </form>
 
             <a id="login-button" class="button">
