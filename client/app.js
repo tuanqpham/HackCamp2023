@@ -84,6 +84,15 @@ function extractLoginValues() {
     }
 }
 
+function showBurgerMenu() {
+    var burgerMenu = document.getElementById('burger-menu');
+    if (burgerMenu.style.display === 'none') {
+        burgerMenu.style.display = 'block';
+    } else {
+        burgerMenu.style.display = 'none';
+    }
+}
+
 function navigateToPostOrSeek() {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('post-or-seek').style.display = 'block';
