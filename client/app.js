@@ -114,52 +114,49 @@
         user.setSchool(school);
     }
 
-    function sendLoginDataToBackend(username, password) {
-        // Prepare the data to be sent
-        const data = {
-            username: username,
-            password: password
-        };
+    // function sendLoginDataToBackend(username, password) {
+    //     // Prepare the data to be sent
+    //     const data = {
+    //         username: username,
+    //         password: password
+    //     };
 
-        // Send a POST request to the login endpoint
-        fetch('/index.html', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Handle the response from the server
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-    }
+    //     // Send a POST request to the login endpoint
+    //     fetch('/index.html', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body: JSON.stringify(data)
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         // Handle the response from the server
+    //         console.log('Success:', data);
+    //     })
+    //     .catch((error) => {
+    //         console.error('Error:', error);
+    //     });
+    // }
 
-    function sendSignupDataToBackend(newUsername, newPassword, confirmPassword) {
-        // Prepare the data to be sent
-        const data = {
-            newUsername: newUsername,
-            newPassword: newPassword
-        };
+function sendSignupDataToBackend(newUsername, newPassword) {
+    const data = {
+        newUsername: newUsername,
+        newPassword: newPassword
+    };
 
-        // Send a POST request to the signup endpoint
-        fetch('/index.html', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            // Handle the response from the server
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-    }
+    fetch('/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
